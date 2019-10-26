@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4215B6FE23640BA000A35BBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4215B6FD23640BA000A35BBC /* AppDelegate.swift */; };
+		4215B70323640BA000A35BBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4215B70123640BA000A35BBC /* Main.storyboard */; };
+		4215B70523640BA100A35BBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4215B70423640BA100A35BBC /* Assets.xcassets */; };
+		4215B70823640BA100A35BBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4215B70623640BA100A35BBC /* LaunchScreen.storyboard */; };
+		4215B7162364150500A35BBC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4215B7152364150500A35BBC /* LoginViewController.swift */; };
+		4215B7182364156700A35BBC /* LoginVC - UISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4215B7172364156700A35BBC /* LoginVC - UISetup.swift */; };
+		4215B71A2364157A00A35BBC /* hexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4215B7192364157A00A35BBC /* hexString.swift */; };
+		4215B71C236416FF00A35BBC /* SourceSansPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4215B71B236416FF00A35BBC /* SourceSansPro-Regular.otf */; };
+		4215B71E2364170900A35BBC /* SourceSansPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4215B71D2364170900A35BBC /* SourceSansPro-Bold.otf */; };
+		6B5DEED070A3E11E3FC0D6DA /* Pods_gleam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB466D2640FD3F998B86F76 /* Pods_gleam.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4215B6FA23640B9F00A35BBC /* gleam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gleam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4215B6FD23640BA000A35BBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4215B70223640BA000A35BBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4215B70423640BA100A35BBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4215B70723640BA100A35BBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4215B70923640BA100A35BBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4215B7152364150500A35BBC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4215B7172364156700A35BBC /* LoginVC - UISetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC - UISetup.swift"; sourceTree = "<group>"; };
+		4215B7192364157A00A35BBC /* hexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hexString.swift; sourceTree = "<group>"; };
+		4215B71B236416FF00A35BBC /* SourceSansPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.otf"; sourceTree = "<group>"; };
+		4215B71D2364170900A35BBC /* SourceSansPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Bold.otf"; sourceTree = "<group>"; };
+		53D0E9A98946F2B9DEA66880 /* Pods-gleam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gleam.debug.xcconfig"; path = "Target Support Files/Pods-gleam/Pods-gleam.debug.xcconfig"; sourceTree = "<group>"; };
+		71312C3673F593623A63AAA8 /* Pods-gleam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gleam.release.xcconfig"; path = "Target Support Files/Pods-gleam/Pods-gleam.release.xcconfig"; sourceTree = "<group>"; };
+		ADB466D2640FD3F998B86F76 /* Pods_gleam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gleam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4215B6F723640B9F00A35BBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B5DEED070A3E11E3FC0D6DA /* Pods_gleam.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4215B6F123640B9F00A35BBC = {
+			isa = PBXGroup;
+			children = (
+				4215B6FC23640BA000A35BBC /* gleam */,
+				4215B6FB23640B9F00A35BBC /* Products */,
+				FF02E47BA634209C151DE60E /* Pods */,
+				EB8E94D5F17981CD3983A882 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4215B6FB23640B9F00A35BBC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4215B6FA23640B9F00A35BBC /* gleam.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4215B6FC23640BA000A35BBC /* gleam */ = {
+			isa = PBXGroup;
+			children = (
+				4215B70F23640C2E00A35BBC /* Models */,
+				4215B71123640C3E00A35BBC /* Views */,
+				4215B71023640C3600A35BBC /* Controllers */,
+				4215B71223640CA300A35BBC /* Helpers */,
+				4215B71323640CAE00A35BBC /* Resources */,
+				4215B6FD23640BA000A35BBC /* AppDelegate.swift */,
+				4215B70123640BA000A35BBC /* Main.storyboard */,
+				4215B70623640BA100A35BBC /* LaunchScreen.storyboard */,
+				4215B70923640BA100A35BBC /* Info.plist */,
+			);
+			path = gleam;
+			sourceTree = "<group>";
+		};
+		4215B70F23640C2E00A35BBC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4215B71023640C3600A35BBC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4215B7142364147C00A35BBC /* LoginViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4215B71123640C3E00A35BBC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4215B71223640CA300A35BBC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4215B71323640CAE00A35BBC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4215B71B236416FF00A35BBC /* SourceSansPro-Regular.otf */,
+				4215B71D2364170900A35BBC /* SourceSansPro-Bold.otf */,
+				4215B70423640BA100A35BBC /* Assets.xcassets */,
+				4215B7192364157A00A35BBC /* hexString.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4215B7142364147C00A35BBC /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4215B7152364150500A35BBC /* LoginViewController.swift */,
+				4215B7172364156700A35BBC /* LoginVC - UISetup.swift */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		EB8E94D5F17981CD3983A882 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ADB466D2640FD3F998B86F76 /* Pods_gleam.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF02E47BA634209C151DE60E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53D0E9A98946F2B9DEA66880 /* Pods-gleam.debug.xcconfig */,
+				71312C3673F593623A63AAA8 /* Pods-gleam.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4215B6F923640B9F00A35BBC /* gleam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4215B70C23640BA100A35BBC /* Build configuration list for PBXNativeTarget "gleam" */;
+			buildPhases = (
+				31885112BB8DD093E891926F /* [CP] Check Pods Manifest.lock */,
+				4215B6F623640B9F00A35BBC /* Sources */,
+				4215B6F723640B9F00A35BBC /* Frameworks */,
+				4215B6F823640B9F00A35BBC /* Resources */,
+				DE5C102D867959514968A3FF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gleam;
+			productName = gleam;
+			productReference = 4215B6FA23640B9F00A35BBC /* gleam.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4215B6F223640B9F00A35BBC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Candace Chiang";
+				TargetAttributes = {
+					4215B6F923640B9F00A35BBC = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = 4215B6F523640B9F00A35BBC /* Build configuration list for PBXProject "gleam" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4215B6F123640B9F00A35BBC;
+			productRefGroup = 4215B6FB23640B9F00A35BBC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4215B6F923640B9F00A35BBC /* gleam */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4215B6F823640B9F00A35BBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4215B70823640BA100A35BBC /* LaunchScreen.storyboard in Resources */,
+				4215B70523640BA100A35BBC /* Assets.xcassets in Resources */,
+				4215B71E2364170900A35BBC /* SourceSansPro-Bold.otf in Resources */,
+				4215B71C236416FF00A35BBC /* SourceSansPro-Regular.otf in Resources */,
+				4215B70323640BA000A35BBC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31885112BB8DD093E891926F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gleam-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE5C102D867959514968A3FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gleam/Pods-gleam-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gleam/Pods-gleam-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gleam/Pods-gleam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4215B6F623640B9F00A35BBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4215B7182364156700A35BBC /* LoginVC - UISetup.swift in Sources */,
+				4215B7162364150500A35BBC /* LoginViewController.swift in Sources */,
+				4215B71A2364157A00A35BBC /* hexString.swift in Sources */,
+				4215B6FE23640BA000A35BBC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4215B70123640BA000A35BBC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4215B70223640BA000A35BBC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4215B70623640BA100A35BBC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4215B70723640BA100A35BBC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4215B70A23640BA100A35BBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4215B70B23640BA100A35BBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4215B70D23640BA100A35BBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53D0E9A98946F2B9DEA66880 /* Pods-gleam.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2CKJ95J2AZ;
+				INFOPLIST_FILE = gleam/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cchiang.gleam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4215B70E23640BA100A35BBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71312C3673F593623A63AAA8 /* Pods-gleam.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2CKJ95J2AZ;
+				INFOPLIST_FILE = gleam/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cchiang.gleam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4215B6F523640B9F00A35BBC /* Build configuration list for PBXProject "gleam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4215B70A23640BA100A35BBC /* Debug */,
+				4215B70B23640BA100A35BBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4215B70C23640BA100A35BBC /* Build configuration list for PBXNativeTarget "gleam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4215B70D23640BA100A35BBC /* Debug */,
+				4215B70E23640BA100A35BBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4215B6F223640B9F00A35BBC /* Project object */;
+}
