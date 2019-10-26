@@ -15,10 +15,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     var imageView: UIImageView!
     var titleLabel: UILabel!
     
-    var usernameField: UITextField!
+    var emailField: UITextField!
     var passwordField: UITextField!
     
-    var username = ""
     var password = ""
     var email = ""
     
@@ -38,7 +37,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         //self.navigationController!.isNavigationBarHidden = true
-        self.usernameField.delegate = self
+        self.emailField.delegate = self
         self.passwordField.delegate = self
         /*
         if Auth.auth().currentUser != nil {
@@ -47,7 +46,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        usernameField.text = ""
+        emailField.text = ""
         passwordField.text = ""
     }
     
@@ -62,8 +61,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    @objc func usernameEntered(_ sender: UITextField) {
-        username = sender.text!
+    @objc func emailEntered(_ sender: UITextField) {
+        email = sender.text!
     }
     
     @objc func passwordEntered(_ sender: UITextField) {
@@ -71,21 +70,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func loginAttempt(_ sender: UIButton) {
-        if username == "" {
+        if email == "" {
             displayAlert(title: "Incomplete", message: "Please enter in your username.")
             return
         } else if password == "" {
             displayAlert(title: "Incomplete", message: "Please enter in your password.")
             return
         } else {
-            /*let userRef = Database.database().reference().child("users").child(username)
+            let userRef = Database.database().reference().child("users").child(email)
             userRef.observeSingleEvent(of: .value, with: { (snapshot) in
                 let value = snapshot.value as? NSDictionary
                 self.email = value?["email"] as? String ?? ""
                 self.emailLogin()
             }) { (error) in
                 self.displayAlert(title: "Invalid", message: "Couldn't find username.")
-            }*/
+            }
         }
     }
     
