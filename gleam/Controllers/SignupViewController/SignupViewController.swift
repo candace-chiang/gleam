@@ -1,8 +1,8 @@
 //
-//  LoginViewController.swift
+//  SignupViewController.swift
 //  gleam
 //
-//  Created by Candace Chiang on 10/25/19.
+//  Created by Carol Wang on 10/26/19.
 //  Copyright © 2019 Candace Chiang. All rights reserved.
 //
 
@@ -10,19 +10,18 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class SignupViewController: UIViewController, UITextFieldDelegate {
     
-    var imageView: UIImageView!
-    var titleLabel: UILabel!
-    
+    var nameField: UITextField!
     var emailField: UITextField!
     var passwordField: UITextField!
     
+    var role = ""
+    var name = ""
     var password = ""
     var email = ""
     
-    var loginButton: UIButton!
-    var registerButton: UIButton!
+    var signupButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,15 +35,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         //self.navigationController!.isNavigationBarHidden = true
+        self.nameField.delegate = self
         self.emailField.delegate = self
         self.passwordField.delegate = self
-        /*
-        if Auth.auth().currentUser != nil {
-            performSegue(withIdentifier: "toFeed", sender: self)
-        }*/
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        nameField.text = ""
         emailField.text = ""
         passwordField.text = ""
     }
@@ -58,6 +55,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    @objc func nameEntered(_ sender: UITextField) {
+        name = sender.text!
     }
     
     @objc func emailEntered(_ sender: UITextField) {
@@ -75,30 +76,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         } else if password == "" {
             displayAlert(title: "Incomplete", message: "Please enter in your password.")
             return
-        } else {
-            let userRef = Database.database().reference().child("users").child(email)
-            userRef.observeSingleEvent(of: .value, with: { (snapshot) in
-                let value = snapshot.value as? NSDictionary
-                self.email = value?["email"] as? String ?? ""
-                self.emailLogin()
-            }) { (error) in
-                self.displayAlert(title: "Invalid", message: "Couldn't find username.")
-            }
+        } else if name == "" {
+            displayAlert(title: "Incomplete", message: "Please enter in your name.")
+            return
         }
     }
     
     @objc func signUp(_ sender: UIButton) {
-        performSegue(withIdentifier: "register", sender: self)
-    }
-    
-    func emailLogin() {
-        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-            if error != nil{
-                self.displayAlert(title: "Invalid", message: "Couldn't sign in.")
-            } else{
-                self.performSegue(withIdentifier: "toFeed", sender: self)
-            }
-        }
+        performSegue(withIdentifier: "toFeed", sender: self)
     }
     
     func displayAlert(title: String, message: String) {
@@ -108,4 +93,5 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
 }
+
 
