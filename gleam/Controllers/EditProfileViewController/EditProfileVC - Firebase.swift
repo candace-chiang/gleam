@@ -76,7 +76,7 @@ extension EditProfileViewController {
                 return
             }
             print("uh it worked?")
-            //self.performSegue(withIdentifier: <#T##String#>, sender: self)
+            self.performSegue(withIdentifier: "editToProfile", sender: self)
         })
     }
     
