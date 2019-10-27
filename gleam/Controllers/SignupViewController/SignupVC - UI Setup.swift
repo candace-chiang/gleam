@@ -13,7 +13,7 @@ extension SignupViewController {
         view.backgroundColor = UIColor(hexString: "232429")
         
         selectLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width * 3/4, height: 30))
-        selectLabel.center = CGPoint(x: view.frame.width/2, y: view.frame.height/15)
+        selectLabel.center = CGPoint(x: view.frame.width/2, y: view.frame.height/7)
         selectLabel.font = UIFont(name: "AvenirNext-Regular", size: 20)
         selectLabel.textColor = UIColor(hexString: "E6E6DD")
         let text = NSMutableAttributedString(string: "i am select one ")
@@ -85,7 +85,7 @@ extension SignupViewController {
         signupButton.backgroundColor = UIColor.clear
         signupButton.setTitle("get started", for: .normal)
         signupButton.setTitleColor(UIColor(hexString: "E6E6DD"), for: .normal)
-        signupButton.titleLabel!.font = UIFont(name: "AvenirNext-Regular", size: 20)
+        signupButton.titleLabel!.font = UIFont(name: "AvenirNext-Bold", size: 20)
         signupButton.addTarget(self, action: #selector(signupAttempt), for: .touchUpInside)
         view.addSubview(signupButton)
     }

@@ -10,6 +10,10 @@
 		1D6421A4236537EB00D6503C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6421A2236537EB00D6503C /* SignupViewController.swift */; };
 		1D6421A5236537EB00D6503C /* SignupVC - UI Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6421A3236537EB00D6503C /* SignupVC - UI Setup.swift */; };
 		1D6421A72365387700D6503C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D6421A62365387700D6503C /* GoogleService-Info.plist */; };
+		1D6421BA2365461300D6503C /* ClientProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6421B92365461300D6503C /* ClientProfileViewController.swift */; };
+		1D6421BC2365461D00D6503C /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6421BB2365461D00D6503C /* FeedViewController.swift */; };
+		1D6421BE2365462C00D6503C /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6421BD2365462C00D6503C /* EditProfileViewController.swift */; };
+		1D6421C02365463400D6503C /* PhotographerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6421BF2365463400D6503C /* PhotographerViewController.swift */; };
 		4215B6FE23640BA000A35BBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4215B6FD23640BA000A35BBC /* AppDelegate.swift */; };
 		4215B70323640BA000A35BBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4215B70123640BA000A35BBC /* Main.storyboard */; };
 		4215B70523640BA100A35BBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4215B70423640BA100A35BBC /* Assets.xcassets */; };
@@ -26,6 +30,10 @@
 		1D6421A2236537EB00D6503C /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		1D6421A3236537EB00D6503C /* SignupVC - UI Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SignupVC - UI Setup.swift"; sourceTree = "<group>"; };
 		1D6421A62365387700D6503C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1D6421B92365461300D6503C /* ClientProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientProfileViewController.swift; sourceTree = "<group>"; };
+		1D6421BB2365461D00D6503C /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		1D6421BD2365462C00D6503C /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		1D6421BF2365463400D6503C /* PhotographerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographerViewController.swift; sourceTree = "<group>"; };
 		4215B6FA23640B9F00A35BBC /* gleam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gleam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4215B6FD23640BA000A35BBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4215B70223640BA000A35BBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +71,38 @@
 			name = SignupViewController;
 			path = gleam/Controllers/SignupViewController;
 			sourceTree = SOURCE_ROOT;
+		};
+		1D6421B22365458500D6503C /* FeedViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1D6421BB2365461D00D6503C /* FeedViewController.swift */,
+			);
+			path = FeedViewController;
+			sourceTree = "<group>";
+		};
+		1D6421B32365459200D6503C /* ClientProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1D6421B92365461300D6503C /* ClientProfileViewController.swift */,
+			);
+			path = ClientProfileViewController;
+			sourceTree = "<group>";
+		};
+		1D6421B4236545C700D6503C /* EditProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1D6421BD2365462C00D6503C /* EditProfileViewController.swift */,
+			);
+			path = EditProfileViewController;
+			sourceTree = "<group>";
+		};
+		1D6421B5236545D500D6503C /* PhotographerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1D6421BF2365463400D6503C /* PhotographerViewController.swift */,
+			);
+			path = PhotographerViewController;
+			sourceTree = "<group>";
 		};
 		4215B6F123640B9F00A35BBC = {
 			isa = PBXGroup;
@@ -111,6 +151,10 @@
 			children = (
 				1D6421A1236537EB00D6503C /* SignupViewController */,
 				4215B7142364147C00A35BBC /* LoginViewController */,
+				1D6421B32365459200D6503C /* ClientProfileViewController */,
+				1D6421B22365458500D6503C /* FeedViewController */,
+				1D6421B4236545C700D6503C /* EditProfileViewController */,
+				1D6421B5236545D500D6503C /* PhotographerViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +244,7 @@
 				TargetAttributes = {
 					4215B6F923640B9F00A35BBC = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1110;
 					};
 				};
 			};
@@ -284,12 +329,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D6421BE2365462C00D6503C /* EditProfileViewController.swift in Sources */,
 				4215B7182364156700A35BBC /* LoginVC - UISetup.swift in Sources */,
 				1D6421A5236537EB00D6503C /* SignupVC - UI Setup.swift in Sources */,
 				4215B7162364150500A35BBC /* LoginViewController.swift in Sources */,
 				1D6421A4236537EB00D6503C /* SignupViewController.swift in Sources */,
+				1D6421BA2365461300D6503C /* ClientProfileViewController.swift in Sources */,
 				4215B71A2364157A00A35BBC /* hexString.swift in Sources */,
 				4215B6FE23640BA000A35BBC /* AppDelegate.swift in Sources */,
+				1D6421C02365463400D6503C /* PhotographerViewController.swift in Sources */,
+				1D6421BC2365461D00D6503C /* FeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +485,7 @@
 			baseConfigurationReference = 53D0E9A98946F2B9DEA66880 /* Pods-gleam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = gleam/Info.plist;
@@ -445,6 +495,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cchiang.gleam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -455,6 +506,7 @@
 			baseConfigurationReference = 71312C3673F593623A63AAA8 /* Pods-gleam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = gleam/Info.plist;

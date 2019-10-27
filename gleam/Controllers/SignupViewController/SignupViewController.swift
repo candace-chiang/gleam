@@ -79,6 +79,8 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         photographer = false
         optionChosen = true
         photographerButton.layer.shadowOpacity = 0
+        photographerButton.titleLabel?.font = UIFont(name: "AvenirNext-Regular", size: 20)
+        clientButton.titleLabel?.font = UIFont(name: "AvenirNext-Bold", size: 20)
         clientButton.layer.shadowColor = UIColor.white.cgColor
         clientButton.layer.shadowOffset = CGSize(width: 5, height: 5)
         clientButton.layer.shadowRadius = 5
@@ -92,6 +94,8 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         photographerButton.layer.shadowOffset = CGSize(width: 5, height: 5)
         photographerButton.layer.shadowRadius = 5
         photographerButton.layer.shadowOpacity = 1
+        photographerButton.titleLabel?.font = UIFont(name: "AvenirNext-Bold", size: 20)
+        clientButton.titleLabel?.font = UIFont(name: "AvenirNext-Regular", size: 20)
         clientButton.layer.shadowOpacity = 0.0
     }
     
@@ -114,7 +118,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
            if error == nil {
                //should be posted to Photographers or Client
                let ref = Database.database().reference().child("Users").child((Auth.auth().currentUser?.uid)!)
-            ref.setValue(["name": self.name, "email": self.email, "photographer": self.photographer])
+            ref.setValue(["name": self.name, "email": self.email, "photographer": self.photographer, "location": "", "radius": "", "rates": "", "tags": [], "description": "", "links": [], "images": []])
                self.emailField.text = ""
                self.passwordField.text = ""
                self.nameField.text = ""
