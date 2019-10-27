@@ -114,20 +114,24 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-       Auth.auth().createUser(withEmail: email, password: password, completion: { (User, error) in
+        Auth.auth().createUser(withEmail: email, password: password, completion: { (User, error) in
            if error == nil {
                let ref = Database.database().reference().child("Users").child((Auth.auth().currentUser?.uid)!)
-            ref.setValue(["name": self.name, "email": self.email, "photographer": self.photographer, "location": "", "radius": "", "rates": "", "tags": [], "description": "", "links": [], "images": []])
-               self.emailField.text = ""
-               self.passwordField.text = ""
-               self.nameField.text = ""
-               self.optionChosen = false
-               //self.performSegue(withIdentifier: "toFeed", sender: self)
+                ref.setValue(["name": self.name, "email": self.email, "photographer": self.photographer, "location": "", "radius": "", "rates": "", "tags": [], "description": "", "links": [], "images": []])
+                self.emailField.text = ""
+                self.passwordField.text = ""
+                self.nameField.text = ""
+                self.optionChosen = false
+                if self.photographer {
+                self.performSegue(withIdentifier: "signupToEdit", sender: self)
+                } else {
+                self.performSegue(withIdentifier: "signupToFeed", sender: self)
+                }
            }
            else {
                self.displayAlert(title: "Error", message: "Error creating user.")
            }
-       })
+        })
     }
     
     func displayAlert(title: String, message: String) {

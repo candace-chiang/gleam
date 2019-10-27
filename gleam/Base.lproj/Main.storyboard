@@ -20,6 +20,8 @@
                     </view>
                     <connections>
                         <segue destination="4hb-1F-q9t" kind="show" identifier="register" id="WkL-tD-jjH"/>
+                        <segue destination="Z3x-0o-TKi" kind="presentation" identifier="loginToFeed" id="GWF-7W-389"/>
+                        <segue destination="gE5-73-oPB" kind="presentation" identifier="loginToProfile" id="oy7-mr-SkD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -119,6 +121,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="oy7-mr-SkD"/>
+        <segue reference="GWF-7W-389"/>
         <segue reference="MiF-Fh-0Eb"/>
         <segue reference="OxN-bA-cnm"/>
     </inferredMetricsTieBreakers>
