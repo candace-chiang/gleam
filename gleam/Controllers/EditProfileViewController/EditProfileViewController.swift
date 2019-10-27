@@ -9,10 +9,15 @@
 import UIKit
 
 class EditProfileViewController: UIViewController {
+    var user: User!
+    
+    var titleLabel: UILabel!
+    var nameLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpTitle()
+        setUpInfo()
         // Do any additional setup after loading the view.
     }
     

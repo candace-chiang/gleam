@@ -27,6 +27,9 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     
     var optionChosen = false
     
+    var userDict: [String: Any]!
+    var id: String!
+    
     var signupButton: UIButton!
     
     override func viewDidLoad() {
@@ -116,22 +119,32 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         
         Auth.auth().createUser(withEmail: email, password: password, completion: { (User, error) in
            if error == nil {
-               let ref = Database.database().reference().child("Users").child((Auth.auth().currentUser?.uid)!)
-                ref.setValue(["name": self.name, "email": self.email, "photographer": self.photographer, "location": "", "radius": "", "rates": "", "tags": [], "description": "", "links": [], "images": []])
+                let id = Auth.auth().currentUser?.uid
+                let ref = Database.database().reference().child("Users").child(id!)
+                let dict = ["name": self.name, "email": self.email, "photographer": self.photographer, "location": "", "radius": 0, "rates": "", "tags": [], "description": "", "links": [], "images": []] as [String: Any]
+                ref.setValue(dict)
+                self.userDict = dict
+                self.id = id
                 self.emailField.text = ""
                 self.passwordField.text = ""
                 self.nameField.text = ""
                 self.optionChosen = false
                 if self.photographer {
-                self.performSegue(withIdentifier: "signupToEdit", sender: self)
+                    self.performSegue(withIdentifier: "signupToEdit", sender: self)
                 } else {
-                self.performSegue(withIdentifier: "signupToFeed", sender: self)
+                    self.performSegue(withIdentifier: "signupToFeed", sender: self)
                 }
            }
            else {
                self.displayAlert(title: "Error", message: "Error creating user.")
            }
         })
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let editVC = segue.destination as? EditProfileViewController {
+            editVC.user = User(id: self.id, user: self.userDict)
+        }
     }
     
     func displayAlert(title: String, message: String) {
