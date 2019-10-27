@@ -127,7 +127,7 @@ extension PhotographerViewController {
         logOutButton.setTitle("log out", for: .normal)
         logOutButton.titleLabel!.font = UIFont(name: "AvenirNext-Regular", size: 20)
         logOutButton.addTarget(self, action: #selector(logout), for: .touchUpInside)
-        logOutButton.backgroundColor = .black
+        logOutButton.setTitleColor(.black, for: .normal)
         view.addSubview(logOutButton)
     }
 }
