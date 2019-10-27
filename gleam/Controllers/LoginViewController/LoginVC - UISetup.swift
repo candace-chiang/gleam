@@ -35,6 +35,7 @@ extension LoginViewController {
         emailField.backgroundColor = UIColor.clear
         emailField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedString.Key.foregroundColor: UIColor(hexString: "E6E6DD")])
         emailField.setBottomBorder()
+        emailField.autocapitalizationType = .none
         emailField.addTarget(self, action: #selector(emailEntered), for: .allEditingEvents)
         view.addSubview(emailField)
         
@@ -45,6 +46,7 @@ extension LoginViewController {
         passwordField.textColor = UIColor(hexString: "E6E6DD")
         passwordField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor: UIColor(hexString: "E6E6DD")])
         passwordField.setBottomBorder()
+        passwordField.autocapitalizationType = .none
         passwordField.addTarget(self, action: #selector(passwordEntered), for: .allEditingEvents)
         view.addSubview(passwordField)
     }

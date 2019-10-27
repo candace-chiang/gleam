@@ -70,13 +70,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @objc func loginAttempt(_ sender: UIButton) {
         if email == "" {
-            displayAlert(title: "Incomplete", message: "Please enter in your username.")
+            displayAlert(title: "Incomplete", message: "Please enter in your email.")
             return
         } else if password == "" {
             displayAlert(title: "Incomplete", message: "Please enter in your password.")
             return
         } else {
-            let userRef = Database.database().reference().child("users").child(email)
+            let userRef = Database.database().reference().child("Users").child(email)
             userRef.observeSingleEvent(of: .value, with: { (snapshot) in
                 let value = snapshot.value as? NSDictionary
                 self.email = value?["email"] as? String ?? ""

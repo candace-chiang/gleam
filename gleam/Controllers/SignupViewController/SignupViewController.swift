@@ -12,14 +12,20 @@ import FirebaseDatabase
 
 class SignupViewController: UIViewController, UITextFieldDelegate {
     
+    var selectLabel: UILabel!
+    var photographerButton: UIButton!
+    var clientButton: UIButton!
+    
     var nameField: UITextField!
     var emailField: UITextField!
     var passwordField: UITextField!
     
-    var role = ""
+    var photographer = false
     var name = ""
     var password = ""
     var email = ""
+    
+    var optionChosen = false
     
     var signupButton: UIButton!
     
@@ -69,9 +75,29 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         password = sender.text!
     }
     
-    @objc func loginAttempt(_ sender: UIButton) {
+    @objc func clientSelected(_ sender: UITextField) {
+        photographer = false
+        optionChosen = true
+        photographerButton.layer.shadowOpacity = 0
+        clientButton.layer.shadowColor = UIColor.white.cgColor
+        clientButton.layer.shadowOffset = CGSize(width: 5, height: 5)
+        clientButton.layer.shadowRadius = 5
+        clientButton.layer.shadowOpacity = 0.5
+    }
+    
+    @objc func photographerSelected(_ sender: UITextField) {
+        photographer = true
+        optionChosen = true
+        photographerButton.layer.shadowColor = UIColor.white.cgColor
+        photographerButton.layer.shadowOffset = CGSize(width: 5, height: 5)
+        photographerButton.layer.shadowRadius = 5
+        photographerButton.layer.shadowOpacity = 0.5
+        clientButton.layer.shadowOpacity = 0.0
+    }
+    
+    @objc func signupAttempt(_ sender: UIButton) {
         if email == "" {
-            displayAlert(title: "Incomplete", message: "Please enter in your username.")
+            displayAlert(title: "Incomplete", message: "Please enter in your email.")
             return
         } else if password == "" {
             displayAlert(title: "Incomplete", message: "Please enter in your password.")
@@ -79,11 +105,25 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         } else if name == "" {
             displayAlert(title: "Incomplete", message: "Please enter in your name.")
             return
+        } else if !optionChosen {
+            displayAlert(title: "Incomplete", message: "Please select an option above.")
+            return
         }
-    }
-    
-    @objc func signUp(_ sender: UIButton) {
-        performSegue(withIdentifier: "toFeed", sender: self)
+        
+       Auth.auth().createUser(withEmail: email, password: password, completion: { (User, error) in
+           if error == nil {
+               let ref = Database.database().reference().child("Users").child((Auth.auth().currentUser?.uid)!)
+            ref.setValue(["name": self.name, "email": self.email, "photographer": self.photographer])
+               self.emailField.text = ""
+               self.passwordField.text = ""
+               self.nameField.text = ""
+               self.optionChosen = false
+               //self.performSegue(withIdentifier: "toFeed", sender: self)
+           }
+           else {
+               self.displayAlert(title: "Error", message: "Error creating user.")
+           }
+       })
     }
     
     func displayAlert(title: String, message: String) {
