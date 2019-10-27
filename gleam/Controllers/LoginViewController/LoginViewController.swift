@@ -99,8 +99,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     self.userDict = value
                     self.id = user?.user.uid
                     if photographer {
-                        self.performSegue(withIdentifier: "test", sender: self)
-                        //self.performSegue(withIdentifier: "loginToProfile", sender: self)
+                        //self.performSegue(withIdentifier: "test", sender: self)
+                        self.performSegue(withIdentifier: "loginToProfile", sender: self)
                     } else {
                         self.performSegue(withIdentifier: "loginToFeed", sender: self)
                     }
@@ -118,9 +118,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let editVC = segue.destination as? EditProfileViewController {
-            editVC.user = User(id: self.id, user: self.userDict)
+//        if let editVC = segue.destination as? EditProfileViewController {
+//            editVC.user = User(id: self.id, user: self.userDict)
+//        }
+        if let photoVC = segue.destination as? PhotographerViewController {
+            photoVC.user = User(id: self.id, user: self.userDict)
         }
+
     }
     
 }

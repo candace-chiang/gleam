@@ -34,6 +34,7 @@ extension EditProfileViewController {
         
         for image in self.selectedImages {
             i += 1
+            self.selectedNums.append(String(i))
             group.enter()
             let data = image.pngData()!
             imageRef.child(String(i)).putData(data, metadata: nil) { (metadata, error) in
@@ -64,6 +65,8 @@ extension EditProfileViewController {
         }
         
         DispatchQueue.main.async {
+            self.user.images = self.selectedNums
+            newInfo["images"] = self.selectedNums
             self.pushUser(newInfo: newInfo)
         }
         

@@ -24,6 +24,8 @@
 		4215B71C236416FF00A35BBC /* SourceSansPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4215B71B236416FF00A35BBC /* SourceSansPro-Regular.otf */; };
 		4215B71E2364170900A35BBC /* SourceSansPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4215B71D2364170900A35BBC /* SourceSansPro-Bold.otf */; };
 		42212D3F2365ABC000725F7D /* EditProfileVC - Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42212D3E2365ABC000725F7D /* EditProfileVC - Firebase.swift */; };
+		42212D412365BF8D00725F7D /* PhotographerVC - UISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42212D402365BF8D00725F7D /* PhotographerVC - UISetup.swift */; };
+		42212D432365BFC000725F7D /* PhotographerVC - Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42212D422365BFC000725F7D /* PhotographerVC - Firebase.swift */; };
 		4241A226236583B100092AD1 /* EditProfileVC - ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4241A225236583B100092AD1 /* EditProfileVC - ImagePicker.swift */; };
 		4241A228236589C000092AD1 /* roundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4241A227236589C000092AD1 /* roundedImage.swift */; };
 		426C366623655AAC00E86D82 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426C366523655AAC00E86D82 /* User.swift */; };
@@ -55,6 +57,8 @@
 		4215B71B236416FF00A35BBC /* SourceSansPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.otf"; sourceTree = "<group>"; };
 		4215B71D2364170900A35BBC /* SourceSansPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Bold.otf"; sourceTree = "<group>"; };
 		42212D3E2365ABC000725F7D /* EditProfileVC - Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditProfileVC - Firebase.swift"; sourceTree = "<group>"; };
+		42212D402365BF8D00725F7D /* PhotographerVC - UISetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotographerVC - UISetup.swift"; sourceTree = "<group>"; };
+		42212D422365BFC000725F7D /* PhotographerVC - Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotographerVC - Firebase.swift"; sourceTree = "<group>"; };
 		4241A225236583B100092AD1 /* EditProfileVC - ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditProfileVC - ImagePicker.swift"; sourceTree = "<group>"; };
 		4241A227236589C000092AD1 /* roundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roundedImage.swift; sourceTree = "<group>"; };
 		426C366523655AAC00E86D82 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = gleam/User.swift; sourceTree = SOURCE_ROOT; };
@@ -124,6 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				1D6421BF2365463400D6503C /* PhotographerViewController.swift */,
+				42212D402365BF8D00725F7D /* PhotographerVC - UISetup.swift */,
+				42212D422365BFC000725F7D /* PhotographerVC - Firebase.swift */,
 			);
 			path = PhotographerViewController;
 			sourceTree = "<group>";
@@ -365,6 +371,7 @@
 				1D6421A4236537EB00D6503C /* SignupViewController.swift in Sources */,
 				B3D0CBA02365627700427D2F /* TableViewCell.swift in Sources */,
 				1D6421BA2365461300D6503C /* ClientProfileViewController.swift in Sources */,
+				42212D412365BF8D00725F7D /* PhotographerVC - UISetup.swift in Sources */,
 				4241A226236583B100092AD1 /* EditProfileVC - ImagePicker.swift in Sources */,
 				4215B71A2364157A00A35BBC /* hexString.swift in Sources */,
 				4215B6FE23640BA000A35BBC /* AppDelegate.swift in Sources */,
@@ -372,6 +379,7 @@
 				4241A228236589C000092AD1 /* roundedImage.swift in Sources */,
 				B3D0CB9E23655A9300427D2F /* FeedVC - Firebase.swift in Sources */,
 				B3D0CB9C23655A8900427D2F /* FeedVC - Table.swift in Sources */,
+				42212D432365BFC000725F7D /* PhotographerVC - Firebase.swift in Sources */,
 				1D6421BC2365461D00D6503C /* FeedViewController.swift in Sources */,
 				B3D0CB9A23655A7D00427D2F /* FeedVC - UISetup.swift in Sources */,
 				426C366623655AAC00E86D82 /* User.swift in Sources */,

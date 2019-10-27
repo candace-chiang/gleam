@@ -20,6 +20,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UITextVi
     var image4: UIButton!
     var selectedButton: UIButton!
     var selectedImages: [UIImage] = []
+    var selectedNums: [String] = []
     
     var profileButton: UIButton!
     var profileImage: UIImage!

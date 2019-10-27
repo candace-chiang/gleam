@@ -19,6 +19,7 @@ class User {
     var tags: [String] = []
     var desc: String!
     var links: [String] = []
+    var images: [String] = []
     
     //don't need to get playlists at first
     init(id: String, user: [String: Any]) {
@@ -38,6 +39,9 @@ class User {
         self.desc = user["description"] as? String
         if let links = user["links"] as? [String] {
             self.links = links
+        }
+        if let images = user["images"] as? [String] {
+            self.images = images
         }
     }
     
