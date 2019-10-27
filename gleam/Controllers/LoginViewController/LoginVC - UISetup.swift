@@ -12,14 +12,14 @@ extension LoginViewController {
     func setUpBackground() {
         view.backgroundColor = UIColor(hexString: "232429")
         
-        imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: view.frame.width * 0.4, height: view.frame.width * 0.4))
         imageView.center = CGPoint(x: view.frame.width/2, y: view.frame.height/4)
         imageView.image = UIImage(named: "Icon")
         imageView.contentMode = .scaleAspectFit
         view.addSubview(imageView)
         
         titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height/8))
-        titleLabel.center = CGPoint(x: view.frame.width/2, y: imageView.frame.maxY + view.frame.height/16)
+        titleLabel.center = CGPoint(x: view.frame.width/2, y: imageView.frame.maxY + view.frame.height/30)
         titleLabel.text = "gleam"
         titleLabel.font = UIFont(name: "AvenirNext-Regular", size: 45)
         titleLabel.textColor = UIColor(hexString: "E6E6DD")
@@ -29,7 +29,7 @@ extension LoginViewController {
     
     func setUpFields() {
         emailField = UITextField(frame: CGRect(x: 0, y: 0, width: view.frame.width * 3/4, height: view.frame.height/15))
-        emailField.center = CGPoint(x: view.frame.width/2, y: titleLabel.frame.maxY + view.frame.height/25)
+        emailField.center = CGPoint(x: view.frame.width/2, y: titleLabel.frame.maxY + view.frame.height/20)
         emailField.font = UIFont(name: "AvenirNext-Regular", size: 18)
         emailField.textColor = UIColor(hexString: "E6E6DD")
         emailField.backgroundColor = UIColor.clear
@@ -67,7 +67,7 @@ extension LoginViewController {
         registerButton.backgroundColor = UIColor.clear
         registerButton.setTitle("new? create an account", for: .normal)
         registerButton.setTitleColor(UIColor(hexString: "E6E6DD"), for: .normal)
-        registerButton.titleLabel!.font = UIFont(name: "AvenirNext-Regular", size: 18)
+        registerButton.titleLabel!.font = UIFont(name: "AvenirNext-Bold", size: 18)
         registerButton.addTarget(self, action: #selector(signUp), for: .touchUpInside)
         view.addSubview(registerButton)
     }

@@ -13,13 +13,13 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="gleam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="2Hm-lp-UFf" kind="show" identifier="register" id="Rd0-XD-77e"/>
+                        <segue destination="4hb-1F-q9t" kind="show" identifier="register" id="WkL-tD-jjH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -27,27 +27,31 @@
             <point key="canvasLocation" x="142" y="100"/>
         </scene>
         <!--Signup View Controller-->
-        <scene sceneID="9em-GQ-cWw">
+        <scene sceneID="P9d-cS-ZhA">
             <objects>
-                <viewController id="2Hm-lp-UFf" customClass="SignupViewController" customModule="gleam" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aCP-3c-1lp">
+                <viewController id="4hb-1F-q9t" customClass="SignupViewController" customModule="gleam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vw7-Ya-zwI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="VvY-GO-bUo"/>
+                        <viewLayoutGuide key="safeArea" id="Uzn-gZ-kcA"/>
                     </view>
-                    <navigationItem key="navigationItem" id="g1R-dA-QfM"/>
+                    <navigationItem key="navigationItem" id="74K-dx-z7P"/>
+                    <connections>
+                        <segue destination="VSb-Qe-562" kind="presentation" identifier="signupToEdit" id="gbo-7f-B6v"/>
+                        <segue destination="Z3x-0o-TKi" kind="presentation" identifier="signupToFeed" id="Pi9-sB-F3c"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4CP-Z0-euv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fs9-Cz-Rnh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="879" y="100"/>
+            <point key="canvasLocation" x="920" y="99"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Profile View Controller-->
         <scene sceneID="zeA-HW-6Xd">
             <objects>
-                <viewController id="VSb-Qe-562" sceneMemberID="viewController">
+                <viewController id="VSb-Qe-562" customClass="EditProfileViewController" customModule="gleam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zkI-Wm-o3k">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="z0J-Rq-W1i"/>
@@ -57,5 +61,65 @@
             </objects>
             <point key="canvasLocation" x="1664" y="100"/>
         </scene>
+        <!--Client Profile View Controller-->
+        <scene sceneID="SGQ-3X-wKz">
+            <objects>
+                <viewController id="LMu-kK-oAr" customClass="ClientProfileViewController" customModule="gleam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qX5-1y-Tz2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="STt-zq-5ga"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="clientLogout" id="V8l-Vc-4cL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ToR-eU-PcL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="800"/>
+        </scene>
+        <!--Feed View Controller-->
+        <scene sceneID="aBt-mM-Kbz">
+            <objects>
+                <viewController id="Z3x-0o-TKi" customClass="FeedViewController" customModule="gleam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R1m-pR-YHw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="VsZ-u7-lBw"/>
+                    </view>
+                    <connections>
+                        <segue destination="LMu-kK-oAr" kind="presentation" identifier="feedToClientProfile" id="H4w-an-shY"/>
+                        <segue destination="gE5-73-oPB" kind="presentation" identifier="feedToPhotographerProfile" id="g2L-MN-v8B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vdA-xh-g7V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="800"/>
+        </scene>
+        <!--Photographer Profile View Controller-->
+        <scene sceneID="wIA-8W-Xb8">
+            <objects>
+                <viewController id="gE5-73-oPB" customClass="PhotographerProfileViewController" customModule="gleam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PE8-nE-Utc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="gJm-r5-x3A"/>
+                    </view>
+                    <connections>
+                        <segue destination="VSb-Qe-562" kind="presentation" identifier="profileToEdit" id="MiF-Fh-0Eb"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="photographerLogout" id="OxN-bA-cnm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WyC-wM-CP3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1664" y="800"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="MiF-Fh-0Eb"/>
+        <segue reference="OxN-bA-cnm"/>
+    </inferredMetricsTieBreakers>
 </document>
