@@ -24,6 +24,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     var loginButton: UIButton!
     var registerButton: UIButton!
     
+    var id: String!
+    var userDict: [String: Any]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -91,10 +94,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             } else{
                 let userRef = Database.database().reference().child("Users").child((user?.user.uid)!)
                 userRef.observeSingleEvent(of: .value, with: { (snapshot) in
-                    let value = snapshot.value as? NSDictionary
+                    let value = snapshot.value as? [String: Any]
                     let photographer = value?["photographer"] as! Bool
+                    self.userDict = value
+                    self.id = user?.user.uid
                     if photographer {
-                        self.performSegue(withIdentifier: "loginToProfile", sender: self)
+                        self.performSegue(withIdentifier: "test", sender: self)
+                        //self.performSegue(withIdentifier: "loginToProfile", sender: self)
                     } else {
                         self.performSegue(withIdentifier: "loginToFeed", sender: self)
                     }
@@ -109,6 +115,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let editVC = segue.destination as? EditProfileViewController {
+            editVC.user = User(id: self.id, user: self.userDict)
+        }
     }
     
 }
