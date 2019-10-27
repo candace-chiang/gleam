@@ -10,5 +10,6 @@ target 'gleam' do
   pod 'Firebase/Storage'
 
   # Pods for gleam
-
+  pod 'McPicker', '~> 2.0.0'
+  
 end

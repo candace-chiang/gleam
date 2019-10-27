@@ -24,6 +24,10 @@
 		4215B71C236416FF00A35BBC /* SourceSansPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4215B71B236416FF00A35BBC /* SourceSansPro-Regular.otf */; };
 		4215B71E2364170900A35BBC /* SourceSansPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4215B71D2364170900A35BBC /* SourceSansPro-Bold.otf */; };
 		6B5DEED070A3E11E3FC0D6DA /* Pods_gleam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB466D2640FD3F998B86F76 /* Pods_gleam.framework */; };
+		B3D0CB9A23655A7D00427D2F /* FeedVC - UISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D0CB9923655A7D00427D2F /* FeedVC - UISetup.swift */; };
+		B3D0CB9C23655A8900427D2F /* FeedVC - Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D0CB9B23655A8900427D2F /* FeedVC - Table.swift */; };
+		B3D0CB9E23655A9300427D2F /* FeedVC - Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D0CB9D23655A9300427D2F /* FeedVC - Firebase.swift */; };
+		B3D0CBA02365627700427D2F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D0CB9F2365627700427D2F /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		53D0E9A98946F2B9DEA66880 /* Pods-gleam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gleam.debug.xcconfig"; path = "Target Support Files/Pods-gleam/Pods-gleam.debug.xcconfig"; sourceTree = "<group>"; };
 		71312C3673F593623A63AAA8 /* Pods-gleam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gleam.release.xcconfig"; path = "Target Support Files/Pods-gleam/Pods-gleam.release.xcconfig"; sourceTree = "<group>"; };
 		ADB466D2640FD3F998B86F76 /* Pods_gleam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gleam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3D0CB9923655A7D00427D2F /* FeedVC - UISetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedVC - UISetup.swift"; sourceTree = "<group>"; };
+		B3D0CB9B23655A8900427D2F /* FeedVC - Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedVC - Table.swift"; sourceTree = "<group>"; };
+		B3D0CB9D23655A9300427D2F /* FeedVC - Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedVC - Firebase.swift"; sourceTree = "<group>"; };
+		B3D0CB9F2365627700427D2F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = gleam/Controllers/FeedViewController/TableViewCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				1D6421BB2365461D00D6503C /* FeedViewController.swift */,
+				B3D0CB9923655A7D00427D2F /* FeedVC - UISetup.swift */,
+				B3D0CB9B23655A8900427D2F /* FeedVC - Table.swift */,
+				B3D0CB9D23655A9300427D2F /* FeedVC - Firebase.swift */,
 			);
 			path = FeedViewController;
 			sourceTree = "<group>";
@@ -162,6 +173,7 @@
 		4215B71123640C3E00A35BBC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B3D0CB9F2365627700427D2F /* TableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -334,11 +346,15 @@
 				1D6421A5236537EB00D6503C /* SignupVC - UI Setup.swift in Sources */,
 				4215B7162364150500A35BBC /* LoginViewController.swift in Sources */,
 				1D6421A4236537EB00D6503C /* SignupViewController.swift in Sources */,
+				B3D0CBA02365627700427D2F /* TableViewCell.swift in Sources */,
 				1D6421BA2365461300D6503C /* ClientProfileViewController.swift in Sources */,
 				4215B71A2364157A00A35BBC /* hexString.swift in Sources */,
 				4215B6FE23640BA000A35BBC /* AppDelegate.swift in Sources */,
 				1D6421C02365463400D6503C /* PhotographerViewController.swift in Sources */,
+				B3D0CB9E23655A9300427D2F /* FeedVC - Firebase.swift in Sources */,
+				B3D0CB9C23655A8900427D2F /* FeedVC - Table.swift in Sources */,
 				1D6421BC2365461D00D6503C /* FeedViewController.swift in Sources */,
+				B3D0CB9A23655A7D00427D2F /* FeedVC - UISetup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
