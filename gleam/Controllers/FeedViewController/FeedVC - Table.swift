@@ -14,7 +14,7 @@ extension FeedViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 6
+        return listings.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -39,6 +39,20 @@ extension FeedViewController: UITableViewDataSource, UITableViewDelegate {
         cell.awakeFromNib()
         let size = CGSize(width: tableView.frame.width, height: view.frame.height/4)
         cell.initCellFrom(size: size)
+        
+        let user = listings[indexPath.section]
+        
+        cell.nameLabel.text = user.name
+        if user.location != "" {
+            cell.locationLabel.text = user.location
+        }
+        if (user.radius != nil) {
+            cell.radiusLabel.text = "\(String(describing: user.radius!)) mile travel radius"
+        }
+        if user.rates != "" {
+            cell.ratesLabel.text = "\(String(describing: user.rates!)) per hour"
+        }
+
         return cell
     }
     
@@ -47,15 +61,6 @@ extension FeedViewController: UITableViewDataSource, UITableViewDelegate {
         tableCell.contentView.layer.masksToBounds = true
         let radius = tableCell.contentView.layer.cornerRadius
         tableCell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: radius).cgPath
-        //let listing = listings[indexPath.row]
-        
-        /*let posterID = event.poster!
-        
-        tableCell.picture.image = event.image
-        tableCell.nameLabel.text = event.title
-        tableCell.hostLabel.text = "by " + event.poster
-        //tableCell.descLabel.text = event.description
-        tableCell.numberLabel.text = "\(event.interested.count)"*/
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -54,20 +54,32 @@ class TableViewCell: UITableViewCell {
     }
     
     func initCellFrom(size: CGSize) {
+        // add shadow on cell
+        backgroundColor = .clear // very important
+        layer.masksToBounds = false
+        layer.shadowOpacity = 0.50
+        layer.shadowRadius = 4
+        layer.shadowOffset = CGSize(width: 0, height: 0)
+        layer.shadowColor = UIColor.white.cgColor
+
+        // add corner radius on `contentView`
+        contentView.backgroundColor = .white
+        contentView.layer.cornerRadius = 12
+        
         contentView.backgroundColor = UIColor(hexString: "#E6E6DD")
         
-        picture = UIImageView(frame: CGRect(x: size.width/15, y: size.height/50, width: size.height/2, height: size.height * 3/5))
+        picture = UIImageView(frame: CGRect(x: size.width/15, y: size.height/8, width: size.height * 2/5, height: size.height * 2/5))
         picture.contentMode = .scaleAspectFit
         picture.image = UIImage(named: "default-profile")
         contentView.addSubview(picture)
         
-        nameLabel = UILabel(frame: CGRect(x: picture.frame.maxX + 20, y: picture.frame.midY - size.height/5 - 5, width: size.width/2, height: 30))
+        nameLabel = UILabel(frame: CGRect(x: picture.frame.maxX + 15, y: picture.frame.midY - size.height/5 - 5, width: size.width * 3/4, height: 27))
         nameLabel.font = UIFont(name: "AvenirNext-Regular", size: 23)
         nameLabel.text = "Mary Xu"
         nameLabel.textColor = UIColor(hexString: "#232429")
         contentView.addSubview(nameLabel)
         
-        let locationImage = UIImageView(frame: CGRect(x: picture.frame.maxX + 20, y: nameLabel.frame.maxY, width: 20, height: 20))
+        let locationImage = UIImageView(frame: CGRect(x: picture.frame.maxX + 15, y: nameLabel.frame.maxY, width: 20, height: 20))
         locationImage.contentMode = .scaleAspectFit
         locationImage.image = UIImage(named: "location")
         contentView.addSubview(locationImage)
@@ -78,7 +90,7 @@ class TableViewCell: UITableViewCell {
         locationLabel.text = "Berkeley, CA"
         contentView.addSubview(locationLabel)
 
-        let radiusImage = UIImageView(frame: CGRect(x: picture.frame.maxX + 20, y: locationLabel.frame.maxY, width: 20, height: 20))
+        let radiusImage = UIImageView(frame: CGRect(x: picture.frame.maxX + 15, y: locationLabel.frame.maxY, width: 20, height: 20))
         radiusImage.contentMode = .scaleAspectFit
         radiusImage.image = UIImage(named: "radius")
         contentView.addSubview(radiusImage)
@@ -89,7 +101,7 @@ class TableViewCell: UITableViewCell {
         radiusLabel.text = "5 mile travel radius"
         contentView.addSubview(radiusLabel)
             
-        let ratesImage = UIImageView(frame: CGRect(x: picture.frame.maxX + 20, y: radiusLabel.frame.maxY, width: 20, height: 20))
+        let ratesImage = UIImageView(frame: CGRect(x: picture.frame.maxX + 15, y: radiusLabel.frame.maxY, width: 20, height: 20))
         ratesImage.contentMode = .scaleAspectFit
         ratesImage.image = UIImage(named: "money")
         contentView.addSubview(ratesImage)

@@ -16,10 +16,10 @@ extension FeedViewController {
         
         usersRef.observeSingleEvent(of: .value, with: { (snapshot) in
             let allUsers = snapshot.value as? [String : Any] ?? [:]
-            //var newUsers: [User] = []
+            var newUsers: [User] = []
             
             for (key, value) in allUsers {
-                //let user = User(id: key, user: value as! [String : Any])
+                let user = User(id: key, user: value as! [String : Any])
                 /*let image = imagesRef.child(key)
                 image.getData(maxSize: 30 * 1024 * 1024) { data, error in
                     if let error = error {
@@ -27,10 +27,25 @@ extension FeedViewController {
                     } else {
                         event.image = UIImage(data: data!)
                     }
+                }*/
+                if user.photographer {
+                    newUsers.append(user)
                 }
-                newEvents.append(event)*/
             }
             //self.events = newUsers.sorted(by: { $0.da > $1.date })
+            if self.sortBy == "low to high" {
+                self.listings = newUsers.sorted(by: {
+                    (String($0.rates[..<$0.rates.firstIndex(of: " ")!]) as NSString).integerValue <
+                        (String($1.rates[..<$1.rates.firstIndex(of: " ")!]) as NSString).integerValue
+                })
+            } else if self.sortBy == "high to low" {
+                self.listings = newUsers.sorted(by: {
+                    (String($0.rates[..<$0.rates.firstIndex(of: " ")!]) as NSString).integerValue >
+                        (String($1.rates[..<$1.rates.firstIndex(of: " ")!]) as NSString).integerValue
+                })
+            } else {
+                self.listings = newUsers
+            }
             self.tableView.reloadData()
         })
     }

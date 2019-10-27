@@ -28,7 +28,10 @@ class User {
         self.photographer = user["photographer"] as? Bool
         self.location = user["location"] as? String
         self.radius = user["radius"] as? Int
-        self.rates = user["rates"] as? String
+        self.rates = user["rates"] as? String ?? "50 - 100"
+        if self.rates == "" {
+            self.rates = "50 - 100"
+        }
         if let tags = user["tags"] as? [String] {
             self.tags = tags
         }

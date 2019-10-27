@@ -19,11 +19,13 @@ class FeedViewController: UIViewController {
     var tableView: UITableView!
     var listings: [User]! = []
     var selected: User!
+    
+    var sortBy = "distance"
       
     let ref = Database.database().reference()
     
     let data: [[String]] = [
-        ["distance", "price"]
+        ["distance", "lowest to highest price", "highest to lowest price"]
     ]
     
     override func viewDidLoad() {
@@ -44,10 +46,6 @@ class FeedViewController: UIViewController {
             switch identifier {
                 case "feedToPhotographerProfile":
                     let detailVC = segue.destination as! PhotographerViewController
-                    //detailVC.user = selected
-                    break
-                case "feedToClientProfile":
-                    let detailVC = segue.destination as! ClientProfileViewController
                     //detailVC.user = selected
                     break
                 default: break
@@ -74,14 +72,22 @@ class FeedViewController: UIViewController {
 
         mcPicker.pickerBackgroundColor = .gray
         mcPicker.show(doneHandler: { [weak self] (selections: [Int : String]) -> Void in
-            if let name = selections[0] {
-                let text = NSMutableAttributedString(string: "filter by \(name) ")
-                text.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 10, length: name.count))
+            var name = selections[0]
+            if name != nil {
+                if name == "highest to lowest price" {
+                    name = "high to low"
+                }
+                if name == "lowest to highest price" {
+                    name = "low to high"
+                }
+                let text = NSMutableAttributedString(string: "filter by \(String(describing: name!)) ")
+                text.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 10, length: name!.count))
                 text.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor(hexString: "E6E6DD"), range: NSRange(location: 0, length: text.length))
                 let arrow = NSMutableAttributedString(string: "\u{25BE}", attributes: [NSAttributedString.Key.font: UIFont(name: "AvenirNext-Regular", size: 30)!])
                 text.append(arrow)
+                self!.sortBy = name!
                 self!.filterLabel.attributedText = text
-                self!.tableView.reloadData()
+                self!.getAllListings()
             }
         })
     }
