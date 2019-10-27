@@ -23,6 +23,9 @@
 		4215B71A2364157A00A35BBC /* hexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4215B7192364157A00A35BBC /* hexString.swift */; };
 		4215B71C236416FF00A35BBC /* SourceSansPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4215B71B236416FF00A35BBC /* SourceSansPro-Regular.otf */; };
 		4215B71E2364170900A35BBC /* SourceSansPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4215B71D2364170900A35BBC /* SourceSansPro-Bold.otf */; };
+		42212D3F2365ABC000725F7D /* EditProfileVC - Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42212D3E2365ABC000725F7D /* EditProfileVC - Firebase.swift */; };
+		4241A226236583B100092AD1 /* EditProfileVC - ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4241A225236583B100092AD1 /* EditProfileVC - ImagePicker.swift */; };
+		4241A228236589C000092AD1 /* roundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4241A227236589C000092AD1 /* roundedImage.swift */; };
 		426C366623655AAC00E86D82 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426C366523655AAC00E86D82 /* User.swift */; };
 		426C36682365616A00E86D82 /* EditProfileVC - UISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426C36672365616A00E86D82 /* EditProfileVC - UISetup.swift */; };
 		6B5DEED070A3E11E3FC0D6DA /* Pods_gleam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB466D2640FD3F998B86F76 /* Pods_gleam.framework */; };
@@ -47,6 +50,9 @@
 		4215B7192364157A00A35BBC /* hexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hexString.swift; sourceTree = "<group>"; };
 		4215B71B236416FF00A35BBC /* SourceSansPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.otf"; sourceTree = "<group>"; };
 		4215B71D2364170900A35BBC /* SourceSansPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Bold.otf"; sourceTree = "<group>"; };
+		42212D3E2365ABC000725F7D /* EditProfileVC - Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditProfileVC - Firebase.swift"; sourceTree = "<group>"; };
+		4241A225236583B100092AD1 /* EditProfileVC - ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditProfileVC - ImagePicker.swift"; sourceTree = "<group>"; };
+		4241A227236589C000092AD1 /* roundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roundedImage.swift; sourceTree = "<group>"; };
 		426C366523655AAC00E86D82 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = gleam/User.swift; sourceTree = SOURCE_ROOT; };
 		426C36672365616A00E86D82 /* EditProfileVC - UISetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditProfileVC - UISetup.swift"; sourceTree = "<group>"; };
 		53D0E9A98946F2B9DEA66880 /* Pods-gleam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gleam.debug.xcconfig"; path = "Target Support Files/Pods-gleam/Pods-gleam.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +103,8 @@
 			children = (
 				1D6421BD2365462C00D6503C /* EditProfileViewController.swift */,
 				426C36672365616A00E86D82 /* EditProfileVC - UISetup.swift */,
+				4241A225236583B100092AD1 /* EditProfileVC - ImagePicker.swift */,
+				42212D3E2365ABC000725F7D /* EditProfileVC - Firebase.swift */,
 			);
 			path = EditProfileViewController;
 			sourceTree = "<group>";
@@ -186,6 +194,7 @@
 				4215B71D2364170900A35BBC /* SourceSansPro-Bold.otf */,
 				4215B70423640BA100A35BBC /* Assets.xcassets */,
 				4215B7192364157A00A35BBC /* hexString.swift */,
+				4241A227236589C000092AD1 /* roundedImage.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -337,14 +346,17 @@
 			files = (
 				1D6421BE2365462C00D6503C /* EditProfileViewController.swift in Sources */,
 				4215B7182364156700A35BBC /* LoginVC - UISetup.swift in Sources */,
+				42212D3F2365ABC000725F7D /* EditProfileVC - Firebase.swift in Sources */,
 				1D6421A5236537EB00D6503C /* SignupVC - UI Setup.swift in Sources */,
 				4215B7162364150500A35BBC /* LoginViewController.swift in Sources */,
 				426C36682365616A00E86D82 /* EditProfileVC - UISetup.swift in Sources */,
 				1D6421A4236537EB00D6503C /* SignupViewController.swift in Sources */,
 				1D6421BA2365461300D6503C /* ClientProfileViewController.swift in Sources */,
+				4241A226236583B100092AD1 /* EditProfileVC - ImagePicker.swift in Sources */,
 				4215B71A2364157A00A35BBC /* hexString.swift in Sources */,
 				4215B6FE23640BA000A35BBC /* AppDelegate.swift in Sources */,
 				1D6421C02365463400D6503C /* PhotographerViewController.swift in Sources */,
+				4241A228236589C000092AD1 /* roundedImage.swift in Sources */,
 				1D6421BC2365461D00D6503C /* FeedViewController.swift in Sources */,
 				426C366623655AAC00E86D82 /* User.swift in Sources */,
 			);

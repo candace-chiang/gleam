@@ -9,6 +9,7 @@
 import UIKit
 
 class PhotographerViewController: UIViewController {
+    var user: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()

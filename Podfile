@@ -8,6 +8,7 @@ target 'gleam' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod 'TagListView', '~> 1.0'
 
   # Pods for gleam
 
