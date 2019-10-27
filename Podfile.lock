@@ -1,4 +1,5 @@
 PODS:
+  - Eureka (5.1.0)
   - Firebase/Auth (6.5.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 6.2.1)
@@ -50,6 +51,8 @@ PODS:
     - GoogleUtilities/Network (~> 6.0)
     - "GoogleUtilities/NSData+zlib (~> 6.0)"
     - nanopb (~> 0.3)
+  - GooglePlacesRow (3.2.0):
+    - Eureka (~> 5.0)
   - GoogleUtilities/AppDelegateSwizzler (6.2.3):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -84,12 +87,14 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - GooglePlacesRow
   - McPicker (~> 2.0.0)
   - TagListView (~> 1.0)
   - ZKCarousel
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
+    - Eureka
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -99,6 +104,7 @@ SPEC REPOS:
     - FirebaseInstanceID
     - FirebaseStorage
     - GoogleAppMeasurement
+    - GooglePlacesRow
     - GoogleUtilities
     - GTMSessionFetcher
     - leveldb-library
@@ -108,6 +114,7 @@ SPEC REPOS:
     - ZKCarousel
 
 SPEC CHECKSUMS:
+  Eureka: 18a5076dcf0c41f9cd9748aa1c42f4d11434bdae
   Firebase: dedc9e48ea3f3649ad5f6b982f8a0c73508a14b5
   FirebaseAnalytics: 3fb375bc9d13779add4039716f868d233a473fad
   FirebaseAuth: a06ad63e9bf4c86165b54cceb1c14d4f4c38d419
@@ -117,6 +124,7 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: 662b8108a09fe9ed01aafdedba100fde8536b0f6
   FirebaseStorage: 618dd8fd886b30adf6e5d1915b1f5c18cb5c3944
   GoogleAppMeasurement: 183bd916af7f80deb67c01888368f1108d641832
+  GooglePlacesRow: 4cd1b667226b951baf6fcf33c64f56e03d9a05ee
   GoogleUtilities: d2b0e277a95962e09bb27f5cd42f5f0b6a506c7d
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
@@ -125,6 +133,6 @@ SPEC CHECKSUMS:
   TagListView: 987b0bdbb16cd9d9e7c0e2ec32aff37ecba8b173
   ZKCarousel: 10d5d84fe490dca8e234e381d27e733a364d119c
 
-PODFILE CHECKSUM: fad56f83bdfa92d2cdb65a2af6fbe25bfba4f807
+PODFILE CHECKSUM: 5e159f40b6a8bdd7f0913bcbe24f3895cf559daa
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.4

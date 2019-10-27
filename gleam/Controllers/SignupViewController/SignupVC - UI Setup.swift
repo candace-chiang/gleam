@@ -13,7 +13,7 @@ extension SignupViewController {
         view.backgroundColor = UIColor(hexString: "232429")
         
         selectLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width * 3/4, height: 30))
-        selectLabel.center = CGPoint(x: view.frame.width/2, y: view.frame.height/7)
+        selectLabel.center = CGPoint(x: view.frame.width/2, y: view.frame.height/7 + 50)
         selectLabel.font = UIFont(name: "AvenirNext-Regular", size: 20)
         selectLabel.textColor = UIColor(hexString: "E6E6DD")
         let text = NSMutableAttributedString(string: "i am select one ")
@@ -73,7 +73,7 @@ extension SignupViewController {
         passwordField.textColor = UIColor(hexString: "E6E6DD")
         passwordField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor: UIColor(hexString: "E6E6DD")])
         passwordField.setBottomBorder()
-        passwordField.isSecureTextEntry = false
+        passwordField.isSecureTextEntry = true
         passwordField.autocapitalizationType = .none
         passwordField.addTarget(self, action: #selector(passwordEntered), for: .allEditingEvents)
         view.addSubview(passwordField)

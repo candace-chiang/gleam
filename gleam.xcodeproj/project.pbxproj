@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D3316AD2365E2C9000F025E /* ClientProfileVC - UISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3316AC2365E2C9000F025E /* ClientProfileVC - UISetup.swift */; };
+		1D3316B22365E2EF000F025E /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3316AF2365E2EF000F025E /* LocationViewController.swift */; };
+		1D3316B32365E2EF000F025E /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3316B02365E2EF000F025E /* LocationSearchTable.swift */; };
+		1D3316B42365E2EF000F025E /* LocationVC - UISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3316B12365E2EF000F025E /* LocationVC - UISetup.swift */; };
 		1D6421A4236537EB00D6503C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6421A2236537EB00D6503C /* SignupViewController.swift */; };
 		1D6421A5236537EB00D6503C /* SignupVC - UI Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6421A3236537EB00D6503C /* SignupVC - UI Setup.swift */; };
 		1D6421A72365387700D6503C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D6421A62365387700D6503C /* GoogleService-Info.plist */; };
@@ -38,6 +42,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D3316AC2365E2C9000F025E /* ClientProfileVC - UISetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ClientProfileVC - UISetup.swift"; sourceTree = "<group>"; };
+		1D3316AF2365E2EF000F025E /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		1D3316B02365E2EF000F025E /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		1D3316B12365E2EF000F025E /* LocationVC - UISetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocationVC - UISetup.swift"; sourceTree = "<group>"; };
 		1D6421A2236537EB00D6503C /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		1D6421A3236537EB00D6503C /* SignupVC - UI Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SignupVC - UI Setup.swift"; sourceTree = "<group>"; };
 		1D6421A62365387700D6503C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -84,6 +92,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D3316AE2365E2EF000F025E /* LocationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1D3316AF2365E2EF000F025E /* LocationViewController.swift */,
+				1D3316B02365E2EF000F025E /* LocationSearchTable.swift */,
+				1D3316B12365E2EF000F025E /* LocationVC - UISetup.swift */,
+			);
+			path = LocationViewController;
+			sourceTree = "<group>";
+		};
 		1D6421A1236537EB00D6503C /* SignupViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +126,7 @@
 		1D6421B32365459200D6503C /* ClientProfileViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1D3316AC2365E2C9000F025E /* ClientProfileVC - UISetup.swift */,
 				1D6421B92365461300D6503C /* ClientProfileViewController.swift */,
 			);
 			path = ClientProfileViewController;
@@ -180,6 +199,7 @@
 		4215B71023640C3600A35BBC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1D3316AE2365E2EF000F025E /* LocationViewController */,
 				1D6421A1236537EB00D6503C /* SignupViewController */,
 				4215B7142364147C00A35BBC /* LoginViewController */,
 				1D6421B32365459200D6503C /* ClientProfileViewController */,
@@ -364,7 +384,10 @@
 			files = (
 				1D6421BE2365462C00D6503C /* EditProfileViewController.swift in Sources */,
 				4215B7182364156700A35BBC /* LoginVC - UISetup.swift in Sources */,
+				1D3316B42365E2EF000F025E /* LocationVC - UISetup.swift in Sources */,
 				42212D3F2365ABC000725F7D /* EditProfileVC - Firebase.swift in Sources */,
+				1D3316B32365E2EF000F025E /* LocationSearchTable.swift in Sources */,
+				1D3316AD2365E2C9000F025E /* ClientProfileVC - UISetup.swift in Sources */,
 				1D6421A5236537EB00D6503C /* SignupVC - UI Setup.swift in Sources */,
 				4215B7162364150500A35BBC /* LoginViewController.swift in Sources */,
 				426C36682365616A00E86D82 /* EditProfileVC - UISetup.swift in Sources */,
@@ -373,6 +396,7 @@
 				1D6421BA2365461300D6503C /* ClientProfileViewController.swift in Sources */,
 				42212D412365BF8D00725F7D /* PhotographerVC - UISetup.swift in Sources */,
 				4241A226236583B100092AD1 /* EditProfileVC - ImagePicker.swift in Sources */,
+				1D3316B22365E2EF000F025E /* LocationViewController.swift in Sources */,
 				4215B71A2364157A00A35BBC /* hexString.swift in Sources */,
 				4215B6FE23640BA000A35BBC /* AppDelegate.swift in Sources */,
 				1D6421C02365463400D6503C /* PhotographerViewController.swift in Sources */,
@@ -531,13 +555,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4R9GRQGXCU;
 				INFOPLIST_FILE = gleam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cchiang.gleam;
+				PRODUCT_BUNDLE_IDENTIFIER = cchiang.gleam1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -552,13 +576,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4R9GRQGXCU;
 				INFOPLIST_FILE = gleam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cchiang.gleam;
+				PRODUCT_BUNDLE_IDENTIFIER = cchiang.gleam1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

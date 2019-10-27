@@ -46,7 +46,7 @@ extension LoginViewController {
         passwordField.textColor = UIColor(hexString: "E6E6DD")
         passwordField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor: UIColor(hexString: "E6E6DD")])
         passwordField.setBottomBorder()
-        passwordField.textContentType = .password
+        passwordField.isSecureTextEntry = true
         passwordField.autocapitalizationType = .none
         passwordField.addTarget(self, action: #selector(passwordEntered), for: .allEditingEvents)
         view.addSubview(passwordField)

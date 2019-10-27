@@ -13,6 +13,8 @@ import McPicker
 
 class FeedViewController: UIViewController {
 
+    var user: User!
+    
     var filterLabel: UILabel!
     var profileImage: UIImageView!
     
@@ -46,7 +48,11 @@ class FeedViewController: UIViewController {
             switch identifier {
                 case "feedToPhotographerProfile":
                     let detailVC = segue.destination as! PhotographerViewController
-                    //detailVC.user = selected
+                    detailVC.user = selected
+                    break
+                case "feedToClientProfile":
+                    let detailVC = segue.destination as! ClientProfileViewController
+                    detailVC.user = user
                     break
                 default: break
             }

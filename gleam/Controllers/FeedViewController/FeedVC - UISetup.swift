@@ -12,7 +12,7 @@ extension FeedViewController {
     func setUpBackground() {
         view.backgroundColor = UIColor(hexString: "#232429")
         
-        profileImage = UIImageView(frame: CGRect(x: view.frame.width - 55, y: 10, width: 45, height: 45))
+        profileImage = UIImageView(frame: CGRect(x: view.frame.width - 55, y: 60, width: 45, height: 45))
         profileImage.contentMode = .scaleAspectFit
         profileImage.image = UIImage(named: "default-profile")
         let profileTap = UITapGestureRecognizer(target: self, action: #selector(FeedViewController.toProfile))
@@ -21,7 +21,7 @@ extension FeedViewController {
         view.addSubview(profileImage)
         
         filterLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width * 3/4, height: 30))
-        filterLabel.center = CGPoint(x: view.frame.width/2, y: view.frame.height/15)
+        filterLabel.center = CGPoint(x: view.frame.width/2, y: view.frame.height/15 + 50)
         filterLabel.font = UIFont(name: "AvenirNext-Regular", size: 27)
         filterLabel.textColor = UIColor(hexString: "E6E6DD")
         filterLabel.textAlignment = .center

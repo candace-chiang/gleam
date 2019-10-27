@@ -13,5 +13,6 @@ target 'gleam' do
 
   # Pods for gleam
   pod 'McPicker', '~> 2.0.0'
+  pod 'GooglePlacesRow'
   
 end

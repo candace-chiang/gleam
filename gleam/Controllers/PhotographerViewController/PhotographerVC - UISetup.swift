@@ -124,8 +124,9 @@ extension PhotographerViewController {
         view.addSubview(editButton)
         
         logOutButton = UIButton(frame: CGRect(x: view.frame.width * 0.7, y: view.frame.height * 0.9, width: view.frame.width/4, height: view.frame.height/30))
-        logOutButton.setTitle("log out", for: .normal)
-        logOutButton.titleLabel!.font = UIFont(name: "AvenirNext-Regular", size: 20)
+        logOutButton.center = CGPoint(x: view.frame.width/2, y: view.frame.height * 0.9)
+        logOutButton.setTitle("sign out", for: .normal)
+        logOutButton.titleLabel!.font = UIFont(name: "AvenirNext-Bold", size: 25)
         logOutButton.addTarget(self, action: #selector(logout), for: .touchUpInside)
         logOutButton.setTitleColor(.black, for: .normal)
         view.addSubview(logOutButton)

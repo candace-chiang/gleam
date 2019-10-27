@@ -41,10 +41,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         //self.navigationController!.isNavigationBarHidden = true
         self.emailField.delegate = self
         self.passwordField.delegate = self
-        
-        if Auth.auth().currentUser != nil {
-            performSegue(withIdentifier: "loginToFeed", sender: self)
-        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -118,13 +114,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let editVC = segue.destination as? EditProfileViewController {
-//            editVC.user = User(id: self.id, user: self.userDict)
-//        }
         if let photoVC = segue.destination as? PhotographerViewController {
             photoVC.user = User(id: self.id, user: self.userDict)
         }
-
+        
+        if let clientVC = segue.destination as? FeedViewController {
+            clientVC.user = User(id: self.id, user: self.userDict)
+        }
     }
     
 }
