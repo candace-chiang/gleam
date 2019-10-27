@@ -76,14 +76,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             displayAlert(title: "Incomplete", message: "Please enter in your password.")
             return
         } else {
-            let userRef = Database.database().reference().child("Users").child(email)
-            userRef.observeSingleEvent(of: .value, with: { (snapshot) in
-                let value = snapshot.value as? NSDictionary
-                self.email = value?["email"] as? String ?? ""
-                self.emailLogin()
-            }) { (error) in
-                self.displayAlert(title: "Invalid", message: "Couldn't find username.")
-            }
+            emailLogin()
         }
     }
     
@@ -96,7 +89,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             if error != nil{
                 self.displayAlert(title: "Invalid", message: "Couldn't sign in.")
             } else{
-                self.performSegue(withIdentifier: "toFeed", sender: self)
+                // should be photographers or clients instead of users
+                let userRef = Database.database().reference().child("Users").child(self.email)
+                userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                    let value = snapshot.value as? NSDictionary
+                    self.email = value?["email"] as? String ?? ""
+                    self.performSegue(withIdentifier: "toFeed", sender: self)
+                }) { (error) in
+                    self.displayAlert(title: "Invalid", message: "Couldn't find username.")
+                }
             }
         }
     }
