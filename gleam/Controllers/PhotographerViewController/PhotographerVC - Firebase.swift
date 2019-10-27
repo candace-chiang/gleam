@@ -29,7 +29,11 @@ extension PhotographerViewController {
         
         let prof = imagesRef.child("profile")
         prof.getData(maxSize: 30 * 1024 * 1024) { data, error in
-            self.profileImage.image = UIImage(data: data!)
+            if error != nil {
+                self.profileImage.image = UIImage(named: "Icon")
+            } else {
+                self.profileImage.image = UIImage(data: data!)
+            }
         }
     }
 }

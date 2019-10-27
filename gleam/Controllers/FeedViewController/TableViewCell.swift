@@ -70,7 +70,8 @@ class TableViewCell: UITableViewCell {
         
         picture = UIImageView(frame: CGRect(x: size.width/15, y: size.height/8, width: size.height * 2/5, height: size.height * 2/5))
         picture.contentMode = .scaleAspectFit
-        picture.image = UIImage(named: "default-profile")
+        picture.image = UIImage(named: "Icon")
+        picture.setRounded()
         contentView.addSubview(picture)
         
         nameLabel = UILabel(frame: CGRect(x: picture.frame.maxX + 15, y: picture.frame.midY - size.height/5 - 5, width: size.width * 3/4, height: 27))
