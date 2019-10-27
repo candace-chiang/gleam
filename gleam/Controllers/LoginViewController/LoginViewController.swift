@@ -41,10 +41,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         //self.navigationController!.isNavigationBarHidden = true
         self.emailField.delegate = self
         self.passwordField.delegate = self
-        /*
+        
         if Auth.auth().currentUser != nil {
-            performSegue(withIdentifier: "toFeed", sender: self)
-        }*/
+            performSegue(withIdentifier: "loginToFeed", sender: self)
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {

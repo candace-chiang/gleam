@@ -11,5 +11,6 @@ target 'gleam' do
   pod 'TagListView', '~> 1.0'
 
   # Pods for gleam
-
+  pod 'McPicker', '~> 2.0.0'
+  
 end
