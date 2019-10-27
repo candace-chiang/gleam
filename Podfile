@@ -9,6 +9,7 @@ target 'gleam' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'TagListView', '~> 1.0'
+  pod 'ZKCarousel'
 
   # Pods for gleam
   pod 'McPicker', '~> 2.0.0'

@@ -77,6 +77,7 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - TagListView (1.4.0)
+  - ZKCarousel (1.0.0)
 
 DEPENDENCIES:
   - Firebase/Auth
@@ -85,6 +86,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - McPicker (~> 2.0.0)
   - TagListView (~> 1.0)
+  - ZKCarousel
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -103,6 +105,7 @@ SPEC REPOS:
     - McPicker
     - nanopb
     - TagListView
+    - ZKCarousel
 
 SPEC CHECKSUMS:
   Firebase: dedc9e48ea3f3649ad5f6b982f8a0c73508a14b5
@@ -120,7 +123,8 @@ SPEC CHECKSUMS:
   McPicker: a0a6b8ece8f1642e05401a29867463aba501188b
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   TagListView: 987b0bdbb16cd9d9e7c0e2ec32aff37ecba8b173
+  ZKCarousel: 10d5d84fe490dca8e234e381d27e733a364d119c
 
-PODFILE CHECKSUM: ebad976296372b3b368cfbf09d015cf273df70ef
+PODFILE CHECKSUM: fad56f83bdfa92d2cdb65a2af6fbe25bfba4f807
 
 COCOAPODS: 1.7.5
