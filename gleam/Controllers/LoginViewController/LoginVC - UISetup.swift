@@ -12,14 +12,14 @@ extension LoginViewController {
     func setUpBackground() {
         view.backgroundColor = UIColor(hexString: "232429")
         
-        imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
         imageView.center = CGPoint(x: view.frame.width/2, y: view.frame.height/4)
         imageView.image = UIImage(named: "Icon")
         imageView.contentMode = .scaleAspectFit
         view.addSubview(imageView)
         
         titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height/8))
-        titleLabel.center = CGPoint(x: view.frame.width/2, y: imageView.frame.maxY + view.frame.height/16)
+        titleLabel.center = CGPoint(x: view.frame.width/2, y: imageView.frame.maxY + view.frame.height/20)
         titleLabel.text = "gleam"
         titleLabel.font = UIFont(name: "AvenirNext-Regular", size: 45)
         titleLabel.textColor = UIColor(hexString: "E6E6DD")

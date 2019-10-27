@@ -82,7 +82,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         clientButton.layer.shadowColor = UIColor.white.cgColor
         clientButton.layer.shadowOffset = CGSize(width: 5, height: 5)
         clientButton.layer.shadowRadius = 5
-        clientButton.layer.shadowOpacity = 0.7
+        clientButton.layer.shadowOpacity = 1
     }
     
     @objc func photographerSelected(_ sender: UITextField) {
@@ -91,7 +91,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         photographerButton.layer.shadowColor = UIColor.white.cgColor
         photographerButton.layer.shadowOffset = CGSize(width: 5, height: 5)
         photographerButton.layer.shadowRadius = 5
-        photographerButton.layer.shadowOpacity = 0.7
+        photographerButton.layer.shadowOpacity = 1
         clientButton.layer.shadowOpacity = 0.0
     }
     

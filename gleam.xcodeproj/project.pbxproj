@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D6421A4236537EB00D6503C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6421A2236537EB00D6503C /* SignupViewController.swift */; };
+		1D6421A5236537EB00D6503C /* SignupVC - UI Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6421A3236537EB00D6503C /* SignupVC - UI Setup.swift */; };
+		1D6421A72365387700D6503C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D6421A62365387700D6503C /* GoogleService-Info.plist */; };
 		4215B6FE23640BA000A35BBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4215B6FD23640BA000A35BBC /* AppDelegate.swift */; };
 		4215B70323640BA000A35BBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4215B70123640BA000A35BBC /* Main.storyboard */; };
 		4215B70523640BA100A35BBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4215B70423640BA100A35BBC /* Assets.xcassets */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D6421A2236537EB00D6503C /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		1D6421A3236537EB00D6503C /* SignupVC - UI Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SignupVC - UI Setup.swift"; sourceTree = "<group>"; };
+		1D6421A62365387700D6503C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4215B6FA23640B9F00A35BBC /* gleam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gleam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4215B6FD23640BA000A35BBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4215B70223640BA000A35BBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,6 +54,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D6421A1236537EB00D6503C /* SignupViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1D6421A2236537EB00D6503C /* SignupViewController.swift */,
+				1D6421A3236537EB00D6503C /* SignupVC - UI Setup.swift */,
+			);
+			name = SignupViewController;
+			path = gleam/Controllers/SignupViewController;
+			sourceTree = SOURCE_ROOT;
+		};
 		4215B6F123640B9F00A35BBC = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +91,7 @@
 				4215B71223640CA300A35BBC /* Helpers */,
 				4215B71323640CAE00A35BBC /* Resources */,
 				4215B6FD23640BA000A35BBC /* AppDelegate.swift */,
+				1D6421A62365387700D6503C /* GoogleService-Info.plist */,
 				4215B70123640BA000A35BBC /* Main.storyboard */,
 				4215B70623640BA100A35BBC /* LaunchScreen.storyboard */,
 				4215B70923640BA100A35BBC /* Info.plist */,
@@ -92,6 +109,7 @@
 		4215B71023640C3600A35BBC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1D6421A1236537EB00D6503C /* SignupViewController */,
 				4215B7142364147C00A35BBC /* LoginViewController */,
 			);
 			path = Controllers;
@@ -213,6 +231,7 @@
 				4215B71E2364170900A35BBC /* SourceSansPro-Bold.otf in Resources */,
 				4215B71C236416FF00A35BBC /* SourceSansPro-Regular.otf in Resources */,
 				4215B70323640BA000A35BBC /* Main.storyboard in Resources */,
+				1D6421A72365387700D6503C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +285,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4215B7182364156700A35BBC /* LoginVC - UISetup.swift in Sources */,
+				1D6421A5236537EB00D6503C /* SignupVC - UI Setup.swift in Sources */,
 				4215B7162364150500A35BBC /* LoginViewController.swift in Sources */,
+				1D6421A4236537EB00D6503C /* SignupViewController.swift in Sources */,
 				4215B71A2364157A00A35BBC /* hexString.swift in Sources */,
 				4215B6FE23640BA000A35BBC /* AppDelegate.swift in Sources */,
 			);
